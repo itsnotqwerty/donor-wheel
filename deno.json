@@ -4,6 +4,7 @@
     "start": "deno run --allow-all main.ts"
   },
   "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.4",
     "oak": "jsr:@oak/oak"
   },
   "nodeModulesDir": "auto"
