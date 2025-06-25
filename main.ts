@@ -11,3 +11,4 @@ app.use(async (context, next) => {
   try { await context.send({ root }) } catch { next(); }
 });
 app.listen({ port: 8000 });
+console.log("Server is running on http://localhost:8000");
