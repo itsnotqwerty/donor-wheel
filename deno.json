@@ -6,5 +6,8 @@
   "imports": {
     "oak": "jsr:@oak/oak"
   },
+  "exclude": [
+    "**/*.js"
+  ],
   "nodeModulesDir": "auto"
 }
