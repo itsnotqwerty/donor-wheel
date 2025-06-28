@@ -8,7 +8,7 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 app.use(async (context, next) => {
   const root = "./static";
-  try { await context.send({ root }) } catch { next(); }
+  try { await context.send({ root }); } catch { next(); }
 });
 app.listen({ port: 8000 });
 console.log("Server is running on http://localhost:8000");
