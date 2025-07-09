@@ -4,7 +4,8 @@ A simple, modern web app for spinning a wheel to select a multiplier (0x, 1x, or
 
 ## Features
 - Animated spinning wheel with 10 segments
-- 7 white 0x, 2 gray 1x, and 1 orange 5x segment
+- 4 white 0x, 2 yellow 1x, and 1 orange 5x segment
+- 2 blue HYDRATE segments and 1 RESPIN segment
 - Responsive, mobile-friendly design
 - Keyboard and button controls
 - Clean, modern UI
