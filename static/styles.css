@@ -3,9 +3,10 @@
   --bg-start: #1a1a1a;
   --bg-end: #2d2d2d;
   --white: #ffffff;
-  --gray: #888888;
-  --orange: #ff6600;
+  --yellow: #ffcc00;
+  --orange: #ff6a00;
   --green: #00cc66;
+  --blue: #67b0ff;
   --text: #ffffff;
   --shadow: 0 4px 20px rgba(0,0,0,0.3);
   --transition: all 0.3s ease;
@@ -47,13 +48,13 @@ h1 {
   transition: transform 3s ease-out;
   background: conic-gradient(
     var(--white)   0deg 36deg,
-    var(--white)  36deg 72deg,
+    var(--blue)  36deg 72deg,
     var(--white)  72deg 108deg,
-    var(--gray)  108deg 144deg,
+    var(--yellow)  108deg 144deg,
     var(--orange)144deg 180deg,
-    var(--gray)  180deg 216deg,
+    var(--yellow)  180deg 216deg,
     var(--white) 216deg 252deg,
-    var(--white) 252deg 288deg,
+    var(--blue) 252deg 288deg,
     var(--white) 288deg 324deg,
     var(--green) 324deg 360deg
   );
