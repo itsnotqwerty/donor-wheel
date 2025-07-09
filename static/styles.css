@@ -141,7 +141,10 @@ h1 {
 @media(max-width:768px) {
   .wheel-container { width:300px; height:300px; }
   h1 { font-size:2rem; }
-  .section span { font-size:1rem; }
+  .section span {
+    font-size:1rem;
+    transform: translate(-50%, -100%) rotate(var(--angle, 0deg)) translateY(-110px);
+  }
   .spin-button { font-size:1rem; padding:0.8rem 1.5rem; }
   .result { font-size:1.2rem; }
 }
