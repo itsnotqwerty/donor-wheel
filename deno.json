@@ -11,8 +11,9 @@
   ],
   "nodeModulesDir": "auto",
   "deploy": {
-    "project": "e3806b56-c6c7-4d20-9aa3-a69dcfd84f31",
+    "project": "0bdb4f35-ad8d-470f-b159-903fd41d8960",
     "exclude": [
+      "**/node_modules",
       "**/node_modules"
     ],
     "include": [],
