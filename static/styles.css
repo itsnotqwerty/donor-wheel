@@ -5,6 +5,7 @@
   --white: #ffffff;
   --gray: #888888;
   --orange: #ff6600;
+  --green: #00cc66;
   --text: #ffffff;
   --shadow: 0 4px 20px rgba(0,0,0,0.3);
   --transition: all 0.3s ease;
@@ -54,7 +55,7 @@ h1 {
     var(--white) 216deg 252deg,
     var(--white) 252deg 288deg,
     var(--white) 288deg 324deg,
-    var(--white) 324deg 360deg
+    var(--green) 324deg 360deg
   );
 }
 .section {
