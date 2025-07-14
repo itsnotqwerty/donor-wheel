@@ -3,6 +3,7 @@ class SpinningWheel {
     constructor() {
         this.wheel = document.getElementById('wheel');
         this.spinButton = document.getElementById('spin-btn');
+        this.spinCount = document.getElementById('spin-count');
         this.result = document.getElementById('result');
         this.sections = Array.from(this.wheel.querySelectorAll('.section')).map((el) => el.dataset.value);
         this.isSpinning = false;
@@ -23,6 +24,14 @@ class SpinningWheel {
 
     spin() {
         if (this.isSpinning) return;
+        // Increment spin count
+        const currentCount = parseInt(this.spinCount.textContent, 10) || 0;
+        // Animate the number ticking up
+        this.spinCount.classList.add('ticking-up');
+        this.spinCount.textContent = currentCount + 1;
+        setTimeout(() => {
+            this.spinCount.classList.remove('ticking-up');
+        }, 500); // Remove class after animation duration
         this.isSpinning = true;
         this.spinButton.disabled = true;
         this.spinButton.textContent = 'SPINNING...';
@@ -64,6 +73,19 @@ class SpinningWheel {
             this.result.classList.add('winner');
         } else {
             this.result.classList.remove('winner');
+        }
+
+        if (value === 'RESPIN') {
+            this.result.textContent = 'RESPIN! Spin again for a chance to win!';
+            this.result.classList.add('respin');
+            const currentCount = parseInt(this.spinCount.textContent, 10) || 0;
+            this.spinCount.classList.add('ticking-down');
+            this.spinCount.textContent = currentCount - 1; // Decrement spin count
+            setTimeout(() => {
+                this.spinCount.classList.remove('ticking-down');
+            }, 500); // Remove class after animation duration
+        } else {
+            this.result.classList.remove('respin');
         }
 
         // Reset button

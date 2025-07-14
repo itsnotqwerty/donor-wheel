@@ -117,6 +117,41 @@ h1 {
 }
 .spin-button:hover { transform: translateY(-2px); }
 .spin-button:disabled { opacity: 0.6; cursor: not-allowed; }
+.spin-counter {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.spin-counter strong {
+  color: var(--white);
+}
+#spin-count {
+  font-weight: bold;
+  color: var(--green);
+  transition: color var(--transition);
+}
+#spin-count {
+  display: inline-block;
+  transition: color var(--transition), transform 0.2s cubic-bezier(.68,-0.55,.27,1.55);
+}
+#spin-count.ticking-up {
+  animation: tick-up 0.3s;
+}
+#spin-count.ticking-down {
+  animation: tick-down 0.3s;
+}
+@keyframes tick-up {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.2) translateY(-10px); }
+  60% { transform: scale(1.1) translateY(-5px); }
+  100% { transform: scale(1) translateY(0); }
+}
+@keyframes tick-down {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(0.9) translateY(10px); }
+  60% { transform: scale(0.95) translateY(5px); }
+  100% { transform: scale(1) translateY(0); }
+}
 .result {
   margin-top: 1.5rem;
   padding: 1rem;
@@ -133,6 +168,11 @@ h1 {
 .result.winner {
   background: rgba(255,102,0,0.2);
   color: var(--orange);
+  animation: pulse 2s infinite;
+}
+.result.respin {
+  background: rgba(0,204,102,0.2);
+  color: var(--green);
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
